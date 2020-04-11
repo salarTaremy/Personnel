@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F3F6DF0-93EF-4AAC-A332-162AFFF763A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Main</RootNamespace>
+    <AssemblyName>Main</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Main.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Main.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Stimulsoft.Base, Version=2012.2.1304.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Controls, Version=2012.2.1304.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Controls.Win, Version=2012.2.1304.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report, Version=2012.2.1304.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report.Design, Version=2012.2.1304.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report.Win, Version=2012.2.1304.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ClsGrdLocalization.vb" />
+    <Compile Include="Classes\%28ClsInformation%29.vb" />
+    <Compile Include="Classes\ClsVersionControl.vb" />
+    <Compile Include="Forms\FrmAddSaleMali.Designer.vb">
+      <DependentUpon>FrmAddSaleMali.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddSaleMali.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddThProperty.Designer.vb">
+      <DependentUpon>FrmAddThProperty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddThProperty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCompany.Designer.vb">
+      <DependentUpon>FrmCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDllToDataBase.Designer.vb">
+      <DependentUpon>FrmDllToDataBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDllToDataBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEditThProperty.Designer.vb">
+      <DependentUpon>FrmEditThProperty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEditThProperty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHoliday.Designer.vb">
+      <DependentUpon>FrmHoliday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHoliday.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmModifyUser.Designer.vb">
+      <DependentUpon>FrmModifyUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmModifyUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSalMali.Designer.vb">
+      <DependentUpon>FrmSalMali.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSalMali.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSaveFileToDb.Designer.vb">
+      <DependentUpon>FrmSaveFileToDb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSaveFileToDb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUsers.Designer.vb">
+      <DependentUpon>FrmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleMian.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FrmAddSaleMali.resx">
+      <DependentUpon>FrmAddSaleMali.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddThProperty.resx">
+      <DependentUpon>FrmAddThProperty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCompany.resx">
+      <DependentUpon>FrmCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDllToDataBase.resx">
+      <DependentUpon>FrmDllToDataBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEditThProperty.resx">
+      <DependentUpon>FrmEditThProperty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHoliday.resx">
+      <DependentUpon>FrmHoliday.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmModifyUser.resx">
+      <DependentUpon>FrmModifyUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSalMali.resx">
+      <DependentUpon>FrmSalMali.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSaveFileToDb.resx">
+      <DependentUpon>FrmSaveFileToDb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUsers.resx">
+      <DependentUpon>FrmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\%28DAL%29\DAL.vbproj">
+      <Project>{80572ebe-dec6-4c1e-b33e-9b71267d1471}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.vbproj">
+      <Project>{9b9a0855-246b-4d22-a9b8-6819951684bc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EF\EF.csproj">
+      <Project>{5f179829-3bf2-4a05-a864-6b127d08511d}</Project>
+      <Name>EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Permission\Permission.vbproj">
+      <Project>{dd8c4cf8-75bb-42b8-978f-9595ed692fc6}</Project>
+      <Name>Permission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Personnely\Personnely.vbproj">
+      <Project>{0f64d22b-66ba-4dc7-ba28-d1458dc621d8}</Project>
+      <Name>Personnely</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Salary\Salary.csproj">
+      <Project>{39b8d39a-d937-42a1-ac98-87ef0ea7c4fd}</Project>
+      <Name>Salary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TarafHesab\TarafHesab.vbproj">
+      <Project>{54036d35-550b-45c4-b7ce-5bf0e73aed8a}</Project>
+      <Name>TarafHesab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserControls\UserControls.vbproj">
+      <Project>{85fc494b-cee4-4261-a287-dd21e9a4dd5a}</Project>
+      <Name>UserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16 %28108%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16 %28121%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tatice-Cristal-Intense-Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connect to sql.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connect to sql1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00361.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00471.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00691.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erkek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-People-User-group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7236.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconsmind-Outline-Pound.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 %28305%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_time_man_clock-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2814%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2817%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock_watch_time-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\absence_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-planner-blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1066.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2815%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2816%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2817%291.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2833%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4412.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8379.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7147.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7492.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voxco-dialer-productivity-gains-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imaghhes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e1d95f093bcf89fa8c97dd78931919ee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discount_offer-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actionlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Finance_loan_money_1889199.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bussiness-loan-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-in-hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal-loan-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-loan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator_Vista_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal_loan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\181095.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic_pay %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic_pay %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic_pay %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic_pay %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic_pay %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic_pay %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OldPerson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

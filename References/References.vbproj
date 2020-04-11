@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F3F6DF0-93EF-4AAC-A332-162AFFF763A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>References</RootNamespace>
+    <AssemblyName>References</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>References.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>References.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.200.220\Common\Taremy\Personel_Dll\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.200.220\Common\Taremy\Personel_Dll\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.200.220\Common\Taremy\Personel_Dll\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.200.220\Common\Taremy\Personel_Dll\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.200.220\Common\Taremy\Personel_Dll\Telerik.WinControls.Scheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.200.220\Common\Taremy\Personel_Dll\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2015.1.331.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\%28DAL%29.vb" />
+    <Compile Include="Classes\ClsClander.vb" />
+    <Compile Include="Classes\ClsCodeMelli.vb" />
+    <Compile Include="Classes\ClsConvert.vb" />
+    <Compile Include="Classes\ClsErrorHandler.vb" />
+    <Compile Include="Classes\ClsGeneral.vb" />
+    <Compile Include="Classes\ClsGrdLocalization.vb" />
+    <Compile Include="Classes\%28ClsInformation%29.vb" />
+    <Compile Include="Classes\ClsHokm.vb" />
+    <Compile Include="Classes\ClsMyForms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\ClsParametrs.vb" />
+    <Compile Include="Classes\ClsPermission.vb" />
+    <Compile Include="Classes\ClsPersonBase.vb" />
+    <Compile Include="Classes\ClsPersonel.vb" />
+    <Compile Include="Classes\ClsPersonnelWork.vb" />
+    <Compile Include="Classes\ClsTarafHesab.vb" />
+    <Compile Include="Classes\ClsTools.vb" />
+    <Compile Include="Classes\ClsUser.vb" />
+    <Compile Include="Classes\ClsVersionControl.vb" />
+    <Compile Include="Forms\FrmAddAndEditTarafHesab.Designer.vb">
+      <DependentUpon>FrmAddAndEditTarafHesab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddAndEditTarafHesab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddThProperty.Designer.vb">
+      <DependentUpon>FrmAddThProperty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddThProperty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddWork.Designer.vb">
+      <DependentUpon>FrmAddWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddWork.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAvamelHokmi.Designer.vb">
+      <DependentUpon>FrmAvamelHokmi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAvamelHokmi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCompany.Designer.vb">
+      <DependentUpon>FrmCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDefaultHokmRls.Designer.vb">
+      <DependentUpon>FrmDefaultHokmRls.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDefaultHokmRls.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDllToDataBase.Designer.vb">
+      <DependentUpon>FrmDllToDataBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDllToDataBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEditThProperty.Designer.vb">
+      <DependentUpon>FrmEditThProperty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEditThProperty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEstekhdamType.Designer.vb">
+      <DependentUpon>FrmEstekhdamType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEstekhdamType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHokm.Designer.vb">
+      <DependentUpon>FrmHokm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHokm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHoliday.Designer.vb">
+      <DependentUpon>FrmHoliday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHoliday.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmKargah.Designer.vb">
+      <DependentUpon>FrmKargah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmKargah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmKarmand.Designer.vb">
+      <DependentUpon>FrmKarmand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmKarmand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmModifyUser.Designer.vb">
+      <DependentUpon>FrmModifyUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmModifyUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPermission.Designer.vb">
+      <DependentUpon>FrmPermission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPermission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPersonnelImportWork.Designer.vb">
+      <DependentUpon>FrmPersonnelImportWork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPersonnelImportWork.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPersonnelImportWorkFromDevice.Designer.vb">
+      <DependentUpon>FrmPersonnelImportWorkFromDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPersonnelImportWorkFromDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPrParametrs.Designer.vb">
+      <DependentUpon>FrmPrParametrs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPrParametrs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSelectCmb.Designer.vb">
+      <DependentUpon>FrmSelectCmb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSelectCmb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUsers.Designer.vb">
+      <DependentUpon>FrmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmVahedKhedmat.Designer.vb">
+      <DependentUpon>FrmVahedKhedmat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmVahedKhedmat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewDefectiveWorks.Designer.vb">
+      <DependentUpon>FrmViewDefectiveWorks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewDefectiveWorks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewHokm.Designer.vb">
+      <DependentUpon>FrmViewHokm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewHokm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewKarmand.Designer.vb">
+      <DependentUpon>FrmViewKarmand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewKarmand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewTarafHEsab.Designer.vb">
+      <DependentUpon>FrmViewTarafHEsab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewTarafHEsab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewWorkPerDay.Designer.vb">
+      <DependentUpon>FrmViewWorkPerDay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewWorkPerDay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmWeek.Designer.vb">
+      <DependentUpon>FrmWeek.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmWeek.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreenLoading.Designer.vb">
+      <DependentUpon>SplashScreenLoading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreenLoading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConnectToSql.Designer.vb">
+      <DependentUpon>FrmConnectToSql.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConnectToSql.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleReferences.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Classes\ClsMyForms.resx">
+      <DependentUpon>ClsMyForms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddAndEditTarafHesab.resx">
+      <DependentUpon>FrmAddAndEditTarafHesab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddThProperty.resx">
+      <DependentUpon>FrmAddThProperty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddWork.resx">
+      <DependentUpon>FrmAddWork.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAvamelHokmi.resx">
+      <DependentUpon>FrmAvamelHokmi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCompany.resx">
+      <DependentUpon>FrmCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDefaultHokmRls.resx">
+      <DependentUpon>FrmDefaultHokmRls.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDllToDataBase.resx">
+      <DependentUpon>FrmDllToDataBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEditThProperty.resx">
+      <DependentUpon>FrmEditThProperty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEstekhdamType.resx">
+      <DependentUpon>FrmEstekhdamType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHokm.resx">
+      <DependentUpon>FrmHokm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHoliday.resx">
+      <DependentUpon>FrmHoliday.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmKargah.resx">
+      <DependentUpon>FrmKargah.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmKarmand.resx">
+      <DependentUpon>FrmKarmand.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmModifyUser.resx">
+      <DependentUpon>FrmModifyUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPermission.resx">
+      <DependentUpon>FrmPermission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPersonnelImportWork.resx">
+      <DependentUpon>FrmPersonnelImportWork.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPersonnelImportWorkFromDevice.resx">
+      <DependentUpon>FrmPersonnelImportWorkFromDevice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPrParametrs.resx">
+      <DependentUpon>FrmPrParametrs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSelectCmb.resx">
+      <DependentUpon>FrmSelectCmb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUsers.resx">
+      <DependentUpon>FrmUsers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmVahedKhedmat.resx">
+      <DependentUpon>FrmVahedKhedmat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewDefectiveWorks.resx">
+      <DependentUpon>FrmViewDefectiveWorks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewHokm.resx">
+      <DependentUpon>FrmViewHokm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewKarmand.resx">
+      <DependentUpon>FrmViewKarmand.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewTarafHEsab.resx">
+      <DependentUpon>FrmViewTarafHEsab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewWorkPerDay.resx">
+      <DependentUpon>FrmViewWorkPerDay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmWeek.resx">
+      <DependentUpon>FrmWeek.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreenLoading.resx">
+      <DependentUpon>SplashScreenLoading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConnectToSql.resx">
+      <DependentUpon>FrmConnectToSql.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Resource\Resource.vbproj">
+      <Project>{d166ad41-a5b9-4bbc-97e6-396bc2cde2f5}</Project>
+      <Name>Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserControls\UserControls.vbproj">
+      <Project>{85fc494b-cee4-4261-a287-dd21e9a4dd5a}</Project>
+      <Name>UserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16 %28108%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16 %28121%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tatice-Cristal-Intense-Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connect to sql.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connect to sql1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00361.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00471.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00691.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erkek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aha-Soft-People-User-group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7236.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconsmind-Outline-Pound.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1240.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

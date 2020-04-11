@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39B8D39A-D937-42A1-AC98-87EF0EA7C4FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Salary</RootNamespace>
+    <AssemblyName>Salary</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Stimulsoft.Editor, Version=2012.1.1300.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2018.1.112.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.RadDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadSpreadsheet, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.RadSpreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.Scheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2018.1.112.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2018.1.112.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.Windows.Documents.Fixed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2018.1.112.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2018.1.112.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2018.1.112.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2018.1.112.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikData, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\TelerikData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikExport, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2018.1.116.40\TelerikExport.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\%28ClsInformation%29.cs" />
+    <Compile Include="Classes\ClsAccontNO.cs" />
+    <Compile Include="Classes\ClsAdvance.cs" />
+    <Compile Include="Classes\ClsBank.cs" />
+    <Compile Include="Classes\ClsBlackListPerson.cs" />
+    <Compile Include="Classes\ClsCompany.cs" />
+    <Compile Include="Classes\ClsDailyLeave.cs" />
+    <Compile Include="Classes\ClsDailyMission.cs" />
+    <Compile Include="Classes\ClsEydiSanavat.cs" />
+    <Compile Include="Classes\ClsGlobal.cs" />
+    <Compile Include="Classes\ClsInsurance.cs" />
+    <Compile Include="Classes\ClsLeave.cs" />
+    <Compile Include="Classes\ClsLoan.cs" />
+    <Compile Include="Classes\ClsMission.cs" />
+    <Compile Include="Classes\ClsMonthlyWork.cs" />
+    <Compile Include="Classes\ClsMonthOfSalary.cs" />
+    <Compile Include="Classes\ClsOtherPayment.cs" />
+    <Compile Include="Classes\ClsPayroll.cs" />
+    <Compile Include="Classes\ClsPersonnelOutput.cs" />
+    <Compile Include="Classes\ClsPersonPay.cs" />
+    <Compile Include="Classes\ClsPony.cs" />
+    <Compile Include="Classes\ClsTax.cs" />
+    <Compile Include="Classes\ClsMorePay.cs" />
+    <Compile Include="Classes\Extensions.cs" />
+    <Compile Include="Forms\FrmAddEditAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddEditAdvance.Designer.cs">
+      <DependentUpon>FrmAddEditAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddEditFormulEydiSanavat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddEditFormulEydiSanavat.Designer.cs">
+      <DependentUpon>FrmAddEditFormulEydiSanavat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddLoanItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddLoanItem.Designer.cs">
+      <DependentUpon>FrmAddLoanItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddMonthOfSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddMonthOfSalary.Designer.cs">
+      <DependentUpon>FrmAddMonthOfSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddPersonToBlackList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddPersonToBlackList.Designer.cs">
+      <DependentUpon>FrmAddPersonToBlackList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddPersonToPayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddPersonToPayList.Designer.cs">
+      <DependentUpon>FrmAddPersonToPayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddRetiredPersons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddRetiredPersons.Designer.cs">
+      <DependentUpon>FrmAddRetiredPersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAdvance.Designer.cs">
+      <DependentUpon>FrmAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAdvanceBlacklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAdvanceBlacklist.Designer.cs">
+      <DependentUpon>FrmAdvanceBlacklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBlackListPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBlackListPerson.Designer.cs">
+      <DependentUpon>FrmBlackListPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDailyLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDailyLeave.Designer.cs">
+      <DependentUpon>FrmDailyLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDailyMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDailyMission.Designer.cs">
+      <DependentUpon>FrmDailyMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDisketBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDisketBank.Designer.cs">
+      <DependentUpon>FrmDisketBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEditEydiSanavat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEditEydiSanavat.Designer.cs">
+      <DependentUpon>FrmEditEydiSanavat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEditLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEditLoan.Designer.cs">
+      <DependentUpon>FrmEditLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEydiSanavat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEydiSanavat.Designer.cs">
+      <DependentUpon>FrmEydiSanavat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFormulEydiSanavat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFormulEydiSanavat.Designer.cs">
+      <DependentUpon>FrmFormulEydiSanavat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHourlyLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHourlyLeave.Designer.cs">
+      <DependentUpon>FrmHourlyLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmInsuranceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmInsuranceList.Designer.cs">
+      <DependentUpon>FrmInsuranceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLeaveType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLeaveType.Designer.cs">
+      <DependentUpon>FrmLeaveType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHourlyMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHourlyMission.Designer.cs">
+      <DependentUpon>FrmHourlyMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLoanDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLoanDetail.Designer.cs">
+      <DependentUpon>FrmLoanDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManageAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManageAdvance.Designer.cs">
+      <DependentUpon>FrmManageAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManageEydiSanavat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManageEydiSanavat.Designer.cs">
+      <DependentUpon>FrmManageEydiSanavat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManageLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManageLoan.Designer.cs">
+      <DependentUpon>FrmManageLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManagePayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManagePayroll.Designer.cs">
+      <DependentUpon>FrmManagePayroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManageTasviye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManageTasviye.Designer.cs">
+      <DependentUpon>FrmManageTasviye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMissionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMissionType.Designer.cs">
+      <DependentUpon>FrmMissionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMonthlyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMonthlyList.Designer.cs">
+      <DependentUpon>FrmMonthlyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMonthOfSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMonthOfSalary.Designer.cs">
+      <DependentUpon>FrmMonthOfSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewLoan.Designer.cs">
+      <DependentUpon>FrmNewLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmOldPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmOldPerson.Designer.cs">
+      <DependentUpon>FrmOldPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPayAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPayAdvance.Designer.cs">
+      <DependentUpon>FrmPayAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPayAdvanceGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPayAdvanceGroup.Designer.cs">
+      <DependentUpon>FrmPayAdvanceGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPayOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPayOther.Designer.cs">
+      <DependentUpon>FrmPayOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPersonPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPersonPay.Designer.cs">
+      <DependentUpon>FrmPersonPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmResidEydiSanavat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmResidEydiSanavat.Designer.cs">
+      <DependentUpon>FrmResidEydiSanavat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSyncLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSyncLeave.Designer.cs">
+      <DependentUpon>FrmSyncLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSyncMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSyncMission.Designer.cs">
+      <DependentUpon>FrmSyncMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTasviye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTasviye.Designer.cs">
+      <DependentUpon>FrmTasviye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTax.Designer.cs">
+      <DependentUpon>FrmTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTaxList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTaxList.Designer.cs">
+      <DependentUpon>FrmTaxList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewDailyLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewDailyLeave.Designer.cs">
+      <DependentUpon>FrmViewDailyLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewDailyMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewDailyMission.Designer.cs">
+      <DependentUpon>FrmViewDailyMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewHourlyLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewHourlyLeave.Designer.cs">
+      <DependentUpon>FrmViewHourlyLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewHourlyMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewHourlyMission.Designer.cs">
+      <DependentUpon>FrmViewHourlyMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEntryWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEntryWork.Designer.cs">
+      <DependentUpon>FrmEntryWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmWorkPerDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmWorkPerDay.Designer.cs">
+      <DependentUpon>FrmWorkPerDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmWorkPerDayWithDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmWorkPerDayWithDetail.Designer.cs">
+      <DependentUpon>FrmWorkPerDayWithDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmWorkPerMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmWorkPerMonth.Designer.cs">
+      <DependentUpon>FrmWorkPerMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\%28DAL%29\DAL.vbproj">
+      <Project>{80572ebe-dec6-4c1e-b33e-9b71267d1471}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.vbproj">
+      <Project>{9b9a0855-246b-4d22-a9b8-6819951684bc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EF\EF.csproj">
+      <Project>{5f179829-3bf2-4a05-a864-6b127d08511d}</Project>
+      <Name>EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Permission\Permission.vbproj">
+      <Project>{dd8c4cf8-75bb-42b8-978f-9595ed692fc6}</Project>
+      <Name>Permission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Personnely\Personnely.vbproj">
+      <Project>{0f64d22b-66ba-4dc7-ba28-d1458dc621d8}</Project>
+      <Name>Personnely</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TarafHesab\TarafHesab.vbproj">
+      <Project>{54036d35-550b-45c4-b7ce-5bf0e73aed8a}</Project>
+      <Name>TarafHesab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserControls\UserControls.vbproj">
+      <Project>{85fc494b-cee4-4261-a287-dd21e9a4dd5a}</Project>
+      <Name>UserControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FrmAddEditAdvance.resx">
+      <DependentUpon>FrmAddEditAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddEditFormulEydiSanavat.resx">
+      <DependentUpon>FrmAddEditFormulEydiSanavat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddLoanItem.resx">
+      <DependentUpon>FrmAddLoanItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddMonthOfSalary.resx">
+      <DependentUpon>FrmAddMonthOfSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddPersonToBlackList.resx">
+      <DependentUpon>FrmAddPersonToBlackList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddPersonToPayList.resx">
+      <DependentUpon>FrmAddPersonToPayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddRetiredPersons.resx">
+      <DependentUpon>FrmAddRetiredPersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAdvance.resx">
+      <DependentUpon>FrmAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAdvanceBlacklist.resx">
+      <DependentUpon>FrmAdvanceBlacklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBlackListPerson.resx">
+      <DependentUpon>FrmBlackListPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDailyLeave.resx">
+      <DependentUpon>FrmDailyLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDailyMission.resx">
+      <DependentUpon>FrmDailyMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDisketBank.resx">
+      <DependentUpon>FrmDisketBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEditEydiSanavat.resx">
+      <DependentUpon>FrmEditEydiSanavat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEditLoan.resx">
+      <DependentUpon>FrmEditLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEydiSanavat.resx">
+      <DependentUpon>FrmEydiSanavat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFormulEydiSanavat.resx">
+      <DependentUpon>FrmFormulEydiSanavat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHourlyLeave.resx">
+      <DependentUpon>FrmHourlyLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmInsuranceList.resx">
+      <DependentUpon>FrmInsuranceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLeaveType.resx">
+      <DependentUpon>FrmLeaveType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHourlyMission.resx">
+      <DependentUpon>FrmHourlyMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLoanDetail.resx">
+      <DependentUpon>FrmLoanDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManageAdvance.resx">
+      <DependentUpon>FrmManageAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManageEydiSanavat.resx">
+      <DependentUpon>FrmManageEydiSanavat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManageLoan.resx">
+      <DependentUpon>FrmManageLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManagePayroll.resx">
+      <DependentUpon>FrmManagePayroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManageTasviye.resx">
+      <DependentUpon>FrmManageTasviye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMissionType.resx">
+      <DependentUpon>FrmMissionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMonthlyList.resx">
+      <DependentUpon>FrmMonthlyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMonthOfSalary.resx">
+      <DependentUpon>FrmMonthOfSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewLoan.resx">
+      <DependentUpon>FrmNewLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmOldPerson.resx">
+      <DependentUpon>FrmOldPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPayAdvance.resx">
+      <DependentUpon>FrmPayAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPayAdvanceGroup.resx">
+      <DependentUpon>FrmPayAdvanceGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPayOther.resx">
+      <DependentUpon>FrmPayOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPersonPay.resx">
+      <DependentUpon>FrmPersonPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmResidEydiSanavat.resx">
+      <DependentUpon>FrmResidEydiSanavat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSyncLeave.resx">
+      <DependentUpon>FrmSyncLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSyncMission.resx">
+      <DependentUpon>FrmSyncMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTasviye.resx">
+      <DependentUpon>FrmTasviye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTax.resx">
+      <DependentUpon>FrmTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTaxList.resx">
+      <DependentUpon>FrmTaxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewDailyLeave.resx">
+      <DependentUpon>FrmViewDailyLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewDailyMission.resx">
+      <DependentUpon>FrmViewDailyMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewHourlyLeave.resx">
+      <DependentUpon>FrmViewHourlyLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewHourlyMission.resx">
+      <DependentUpon>FrmViewHourlyMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEntryWork.resx">
+      <DependentUpon>FrmEntryWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmWorkPerDay.resx">
+      <DependentUpon>FrmWorkPerDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmWorkPerDayWithDetail.resx">
+      <DependentUpon>FrmWorkPerDayWithDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmWorkPerMonth.resx">
+      <DependentUpon>FrmWorkPerMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tatice-Cristal-Intense-Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2815%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2816%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2817%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2814%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2835%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2813%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %2832%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1075.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1077.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Detail2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cortana-icon-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cortana-icon-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_yellow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
